@@ -1,0 +1,108 @@
+Snakes And Ladders - Trial Specifications
+
+Contents
+    Trial 1 - vector shape snake graphics
+        Instructions to AI
+        Technology
+        File Layout
+        Introduction
+        Display Layout
+        Snake Designs
+
+    Trial 2 - board and snake variant layout 
+        Instructions to AI
+
+
+<h1>Trial 1 - vector shape snake graphics
+<h2>Instructions to AI
+    1) Read and analyse the following specification 
+    
+    2) Raise any queries arising
+
+    3) Author responds to queries
+
+    4) Test and Adjustment Cycle
+
+<h2>Technology
+    HTML
+    CSS
+    Javascript - es6 Modules
+    Konva graphics
+
+<h2>File Layout
+    /SnakesAndLadders
+        /doc - documentation 
+        /src - source files
+            /test - source for tests and trials, including this specification
+                testSnakes.html - the main html file for this trial 
+            
+<h2>Introduction
+    This is a specification for a trial of the feasibility of using
+    random variant vector graphic shape designs for Snakes
+    for the game snakes and ladders.
+
+<h2>Display Layout
+    500 x 600px stage with white background, for drawing snakes (details below).
+    Next button for re-drawing the snakes.
+
+<h2>Snake Designs
+    Eight random variant vector graphic snake shape designs should be displayed.
+
+    The snakes should be from 90 to 432 pixels in length, including the forked
+    tongue at the head. They should be sinusoidal within a range of 34px and a 
+    maximum of 25px wide.
+
+    The snakes should lie vertically with a maximum offset from the vertical
+    at head or tail of 108px.
+
+    The snakes should not overlap.
+
+    The snakes should be bright colours, decorated with horizontal bands, spots,
+    rings, diamond shapes or lengthwise squiggles.
+
+<h1>Trial 2 - board and snake variants layout
+
+    Contents
+        Instructions to AI
+        Display Layout
+
+    Having got the snake variants ok, we proceed to lay them out on the
+    snakes and ladders board. The technology remains the same.
+
+    This will now be an evolved development, divided into trials and 
+    testing/adjustment, rather than a project with an opening, complete
+    specification.
+
+<h2>Instructions to AI
+
+    1) Read and Analyse the Trial 2 specification
+
+    2) Raise any queries
+
+    3) Author responds to queries
+
+    4) Create code for src/test
+
+    5) Author test and modify
+
+<h2>Display Layout
+
+    The stage should be 360 x 600px, with a yellowish off-white background and a grid 
+    of 8 x 11 square(45 x 45px) grey bordered cells aligned with the top of the stage.
+
+    Nine snakes using the methods for variants established at 
+    Snake-Stage-5-Variants should appear on the board randomly such that:
+    1) The tip of the tongue and the end of the tail sit in the centre of
+        a grid square.
+    2) The snake is aligned vertically, with a random variation such that
+        the tail falls into a column one cell to the left or one cell
+        to the right of the head.
+    3) The snake is not less than three cells high.
+    4) The snake is not more than nine cells high.
+    5) The snake does not extend beyond the edges of the board (grid)
+    6) No two snakes have heads or tails in the same cell
+    7) Snakes do not touch or cross each other
+    8) Snakes may appear in the same column, but not in contact with
+        each other.
+
+    There should be a Next Layout button below the stage.

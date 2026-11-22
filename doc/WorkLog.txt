@@ -1,0 +1,28 @@
+Snakes and Ladders - Work Log
+
+Date Commenced: 22/11/2026
+
+Jobs Due 
+
+    Trial 1
+
+    * Work with AI to trial vector drawn snakes.
+
+        * Submit snake specification
+
+        * Submit example graphic
+
+        * Do sample of five variants - check
+
+    Trial 2
+
+        Do a sample board with snakes from the variants, using 
+        trial specification 2
+
+        Amendments to Trial 2 - specification 
+
+            Not more than 2 heads (tongue tips) should appear in any row
+
+            There should be seven snakes rather than 9, to allow for ladders
+
+            The top left cell should always be free of snakes
