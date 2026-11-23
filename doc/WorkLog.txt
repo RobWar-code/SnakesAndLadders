@@ -4,7 +4,7 @@ Date Commenced: 22/11/2026
 
 Jobs Due 
 
-    Trial 1
+    * Trial 1
 
     * Work with AI to trial vector drawn snakes.
 
@@ -14,15 +14,55 @@ Jobs Due
 
         * Do sample of five variants - check
 
-    Trial 2
+    * Trial 2
 
-        Do a sample board with snakes from the variants, using 
+        * Do a sample board with snakes from the variants, using 
         trial specification 2
 
-        Amendments to Trial 2 - specification 
+        * Amendments to Trial 2 - specification 
 
-            Not more than 2 heads (tongue tips) should appear in any row
+            * Not more than 2 heads (tongue tips) should appear in any row
 
-            There should be seven snakes rather than 9, to allow for ladders
+            * There should be seven snakes rather than 9, to allow for ladders
 
-            The top left cell should always be free of snakes
+            * The top left cell should always be free of snakes
+
+    * Trial 3
+
+        * Add ladders to the board
+
+        * Amendments to Trial 3 - Specification 
+
+            * Not more than two ladder bases should appear in one row
+
+        * Amendments to Trial 3
+
+            * Add the square numbering. 26pt bold, 60% opacity, centred on each cell
+            overlaying the snakes and ladders. Numbered 1 at the bottom left to 
+            88 at the top left. Order in alternate directions up the grid.
+
+        * Amendments 2 to Trial 3 continued
+
+            * No snake head should appear in the top right corner (rather than
+            the top left as previously specified)
+
+            * No Ladder top should appear in the top right corner (rather than the top 
+            left as previously specified)
+
+    * Trial 4
+        
+        *Add die, reduce size of number font.
+
+    Trial 5
+
+        * Add display layout, pieces and game play
+
+    Amendments 1 to Trial 5
+
+        Remove the retries status line from the display
+
+        Add a Charts button to the menu bar. When clicked, this should
+        display an overlay listing the winner (Computer or Player) and
+        the number of turns used to complete the game. Maximum of ten 
+        entries ranked in lowest number of turns first order. Data from
+        current browser session.

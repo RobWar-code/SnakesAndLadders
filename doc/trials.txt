@@ -106,3 +106,166 @@ Contents
         each other.
 
     There should be a Next Layout button below the stage.
+
+<h1>Trial 3 - Add Ladders
+
+    We keep the snake variants, the board layout and the snake
+    layout the same, but add in the ladders.
+
+    The technology remains the same.
+
+ <h2>Instructions to AI
+
+    1) Read and Analyse the Trial 3 specification
+
+    2) Raise any queries
+
+    3) Author responds to queries
+
+    4) Create code for src/test
+
+    5) Author test and modify
+
+<h2>Display Layout
+    Six ladders are to be added at random to the board. These are reddish-brown
+    and 32px wide. They are layed out as follows:
+
+    1) The ladders begin and end in the centre of a grid square,
+
+    2) The minimum vertical height of a ladder is 90px (3 grid squares, centre
+     to centre).
+
+    3) The maximum vertical height of a ladder is 360px (9 grid squares, centre
+     to centre).
+
+    4) Like the snakes, the ladders can be offset at the base by -1, 0 or +1 cell
+
+    5) Ladders should not begin or end on the same grid cell as the start or end
+        of other ladders or snakes.
+
+    6) Ladders should not end in the top left cell.
+
+    7) Ladders should not start in the bottom left cell.
+
+    8) Ladders should not cross snakes or other ladders.
+
+<h1>Trial 4 - add die
+    This trial adds the six-sided die
+
+<h2>Amendments for the board
+
+    The cell numbering should be 22px rather 26px.
+
+    The top and end cells of the ladders and snakes should
+    be stored for use in the course of the game.
+
+<h2>Instructions to AI
+
+    1) Read and Analyse the Trial 3 specification
+
+    2) Raise any queries
+
+    3) Author responds to queries
+
+    4) Create code for src - use SnakesAndLadders/src for the working code this time
+        instead of /src/test. Use index.html instead of testSnakes.html
+        and place it in the /SnakesAndLadders directory
+
+    5) Author test and modify
+
+<h2>Display Layout
+
+    The bottom 105px of the stage should be coloured green. The die 
+    should be 60px square off-white with rounded corners. The spot marked 
+    die should appear in the centre of the bottom area.
+
+    When clicked or touched, the die should appear to spin vertically and 
+    horizontally, to select the number.
+
+<h1>Trial 5 - display layout, pieces and play
+    This trial introduces the working display layout, the piece
+    graphics and play.
+
+<h2>Instructions to AI
+
+    1) Read and Analyse the Trial 3 specification
+
+    2) Raise any queries
+
+    3) Author responds to queries
+
+    4) Create code for src and index.html
+
+    5) Author test and modify
+
+<h2>Display Layout
+    The display area should be 360px wide centred for PC's and mobiles.
+
+<h3>Introductory Overlay
+    The introductory overlay appears when the app is first loaded, it
+    gives a description of the game. It has a Game Start button to clear
+    the overlay and begin the game.
+
+<h3>Menu Bar 
+    The menu bar appears at the top of the display, it has a logo on the
+    left and the button options Restart and Home on the right.
+
+    The Restart presents a new board and game.
+
+    The Home button sets the browser on ../index.html
+
+<h3>Stage
+    The board and dice area is prepared and presented as established.
+
+    We now add the player's and the computer's pieces to the bottom
+    left hand cell (1) of the board.
+
+    For the pieces, use konva vector graphics as per the example
+    (tidied-up) in the attached samplePiece.zip file (like a chess pawn).
+
+    The pieces should be 25px high, red with black outline for the player
+    white with black outline for the computer. The pieces should overlay
+    the snakes and ladders and the numbers.
+
+    The pieces should stick to lanes in the grid rows, the computer on 
+    the top third of a cell, the player's in the bottom (overlaying the 
+    computer's when on the same cell).
+
+<h3>Status Line 
+    This appears below the stage, with text centred. It tells the player
+    whose turn it is and prompts the player to touch/click the die.
+
+<h3>Win/Lose Overlay
+    The Win/Lose overlay panel is displayed when the computer/player's 
+    piece reaches cell 88.
+
+    It displays the appropriate message.
+
+    The overlay has a Restart Game button, to start the game from scratch.
+    
+<h2>Game Play 
+
+    The starting player is selected at random, and then take alternate
+    turns.
+
+    When it is the computer's turn, the status line displays "Computer's 
+    turn", the die spins and the piece is moved the matching number of
+    cells as a hopping animation, following the numbering of the board.
+
+    If the piece ends on a snake's top, it is shown as an animation
+    sliding down the snake to the end.
+
+    If the piece ends on a ladder end, it is shown as an animation sliding 
+    up the ladder to its top.
+
+    If the player/computer rolls a six, they get an additional turn 
+    (regardless of whether they have slid down a snake or up a ladder).
+
+    On the top row, a player must get an exact roll to get to the top right
+    cell (88), if their throw exceeds this, they remain on the same cell.
+
+    When the player gets to land on cell 88 he is the winner, and the win 
+    overlay is displayed. Otherwise, if the computer gets to cell 88, the
+    lose overlay is displayed.
+
+

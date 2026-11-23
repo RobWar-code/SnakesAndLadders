@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link rel="icon" type="image/png" href="favicon.png">
+        <title>Snakes &amp; Ladders</title>
+        <style>
+            *{
+                box-sizing:border-box
+            }
+            body{
+                font:15px system-ui,Arial,sans-serif;
+                background:#eee;
+                margin:0;
+                color:#252525
+            }
+            .app{
+                width:360px;
+                max-width:100%;
+                margin:0 auto;
+                background:#faf7e7;
+                position:relative;
+                min-height:100vh
+            }
+            .menu{
+                height:54px;
+                display:flex;
+                align-items:center;
+                gap:8px;padding:6px 9px;
+                background:#e4e8da;
+                border-bottom:1px solid #aab3a1
+            }
+            .logo{
+                font-weight:800;
+                flex:1;
+                font-size:16px;
+                /* white-space:nowrap */
+            }
+            .menu button,.menu a,.panel button{
+                font:inherit;
+                padding:7px 10px;
+                border:1px solid #64755d;
+                border-radius:7px;
+                background:white;
+                color:#203c25;
+                text-decoration:none;
+                cursor:pointer
+            }
+            .menu button:disabled{opacity:.5}
+            #stage{
+                width:360px;
+                height:600px;
+                max-width:100%;
+                touch-action:manipulation
+            }
+            #status{
+                padding:12px 8px;
+                text-align:center;
+                font-weight:600;
+                min-height:48px
+            }
+            .chart-table{
+                width:100%;
+                border-collapse:collapse;
+                margin:14px 0;
+                text-align:left;
+                font-size:14px
+            }
+            .chart-table th,.chart-table td{
+                padding:7px 6px;
+                border-bottom:1px solid #d7dfd1
+            }
+            .chart-table th:last-child,.chart-table td:last-child{
+                text-align:right
+            }
+            .chart-empty{
+                color:#536052
+            }
+            .chart-close{
+                margin-top:8px
+            }
+            .overlay{
+                position:absolute;
+                inset:54px 0 0;
+                background:rgba(24,35,24,.58);
+                display:flex;
+                align-items:flex-start;
+                justify-content:center;
+                padding:105px 15px 20px;
+                z-index:3
+            }
+            .overlay[hidden]{
+                display:none
+            }
+            .panel{
+                background:#fffdf2;
+                border:2px solid #57734b;
+                border-radius:12px;
+                box-shadow:0 8px 30px #17251855;
+                padding:20px 18px;
+                text-align:center;
+                width:100%
+            }
+            .panel h1{
+                font-size:23px;
+                margin:0 0 12px
+            }
+            .panel p{line-height:1.5}
+            .panel button{
+                background:#398b48;
+                color:white;
+                font-weight:700;
+                padding:11px 20px
+            }
+            .panel button:focus-visible,.menu button:focus-visible,.menu a:focus-visible{outline:3px solid #ef9b32}
+        </style>
+    </head>
+    <body>
+        <main class="app">
+            <header class="menu">
+                <span class="logo">🎲 Snakes &amp; Ladders</span>
+                <button id="chartsButton" type="button">Charts</button>
+                <button id="restart">Restart</button>
+                <a href="../index.html">Home</a>
+            </header>
+            <div id="stage" aria-label="Snakes and ladders board with interactive die"></div>
+            <div id="status" role="status" aria-live="polite"></div>
+            <div id="intro" class="overlay">
+                <section class="panel">
+                    <h1>Snakes &amp; Ladders</h1>
+                    <p>Race the computer from square 1 to 88! Touch the die to roll. Climb ladders, slide down snakes, and roll a six for an extra turn. You must land exactly on 88 to win.</p>
+                    <button id="start">Game Start</button>
+                </section>
+            </div>
+            <div id="finish" class="overlay" hidden>
+                <section class="panel">
+                    <h1 id="resultText"></h1>
+                    <p>Play again with a new board?</p>
+                    <button id="again">Restart Game</button>
+                </section>
+            </div>
+            <div id="charts" class="overlay" hidden>
+                <section class="panel" role="dialog" aria-modal="true" aria-labelledby="chartsTitle">
+                    <h1 id="chartsTitle">Game Charts</h1>
+                    <p>Best completed games this browser session, ranked by fewest turns.</p>
+                    <div id="chartsContent"></div>
+                    <button id="chartsClose" class="chart-close" type="button">Dismiss</button>
+                </section>
+            </div>
+        </main>
+
+        <script src="https://cdn.jsdelivr.net/npm/konva@9/konva.min.js"></script>
+        <script type="module" src="./src/game.js"></script>
+
+    </body>
+
+</html>
